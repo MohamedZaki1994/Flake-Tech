@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		354EF0FE26FB248C00051A95 /* Flake_TechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EF0FD26FB248C00051A95 /* Flake_TechApp.swift */; };
+		354EF10026FB248C00051A95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EF0FF26FB248C00051A95 /* ContentView.swift */; };
+		354EF10226FB248E00051A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354EF10126FB248E00051A95 /* Assets.xcassets */; };
+		354EF10526FB248E00051A95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354EF10426FB248E00051A95 /* Preview Assets.xcassets */; };
+		354EF10726FB248E00051A95 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EF10626FB248E00051A95 /* Persistence.swift */; };
+		354EF10A26FB248E00051A95 /* Flake_Tech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 354EF10826FB248E00051A95 /* Flake_Tech.xcdatamodeld */; };
+		354EF11326FB3F3B00051A95 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354EF11226FB3F3B00051A95 /* Launch Screen.storyboard */; };
+		35938A9127C38CCF0048C906 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9027C38CCF0048C906 /* CategoriesView.swift */; };
+		35938A9327C390250048C906 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9227C390250048C906 /* CategoriesViewModel.swift */; };
+		35938A9527C3A6F00048C906 /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9427C3A6F00048C906 /* CategoryItemView.swift */; };
+		35938A9927C3AFAD0048C906 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9827C3AFAD0048C906 /* HomeView.swift */; };
+		35938A9B27C3AFC00048C906 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9A27C3AFC00048C906 /* HomeViewModel.swift */; };
+		35938A9D27C3BEC10048C906 /* TopOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9C27C3BEC10048C906 /* TopOffersView.swift */; };
+		35938A9F27C3BEF50048C906 /* TopOffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9E27C3BEF50048C906 /* TopOffersViewModel.swift */; };
+		35938AA127C3D3010048C906 /* EditorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938AA027C3D3010048C906 /* EditorialView.swift */; };
+		35B08CCF27C2958500BA0AF8 /* LandingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */; };
+		35B08CD127C2959C00BA0AF8 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		354EF0FA26FB248C00051A95 /* Flake-Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flake-Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		354EF0FD26FB248C00051A95 /* Flake_TechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flake_TechApp.swift; sourceTree = "<group>"; };
+		354EF0FF26FB248C00051A95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		354EF10126FB248E00051A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		354EF10426FB248E00051A95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		354EF10626FB248E00051A95 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		354EF10926FB248E00051A95 /* Flake_Tech.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flake_Tech.xcdatamodel; sourceTree = "<group>"; };
+		354EF10B26FB248E00051A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354EF11226FB3F3B00051A95 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		35938A9027C38CCF0048C906 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		35938A9227C390250048C906 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		35938A9427C3A6F00048C906 /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
+		35938A9827C3AFAD0048C906 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		35938A9A27C3AFC00048C906 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		35938A9C27C3BEC10048C906 /* TopOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopOffersView.swift; sourceTree = "<group>"; };
+		35938A9E27C3BEF50048C906 /* TopOffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopOffersViewModel.swift; sourceTree = "<group>"; };
+		35938AA027C3D3010048C906 /* EditorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorialView.swift; sourceTree = "<group>"; };
+		35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContainerView.swift; sourceTree = "<group>"; };
+		35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		354EF0F726FB248C00051A95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		354EF0F126FB248C00051A95 = {
+			isa = PBXGroup;
+			children = (
+				354EF0FC26FB248C00051A95 /* Flake-Tech */,
+				354EF0FB26FB248C00051A95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		354EF0FB26FB248C00051A95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354EF0FA26FB248C00051A95 /* Flake-Tech.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		354EF0FC26FB248C00051A95 /* Flake-Tech */ = {
+			isa = PBXGroup;
+			children = (
+				354EF0FD26FB248C00051A95 /* Flake_TechApp.swift */,
+				354EF0FF26FB248C00051A95 /* ContentView.swift */,
+				35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */,
+				35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */,
+				35938A8F27C38CBA0048C906 /* Tabs */,
+				354EF10126FB248E00051A95 /* Assets.xcassets */,
+				354EF10626FB248E00051A95 /* Persistence.swift */,
+				354EF11226FB3F3B00051A95 /* Launch Screen.storyboard */,
+				354EF10B26FB248E00051A95 /* Info.plist */,
+				354EF10826FB248E00051A95 /* Flake_Tech.xcdatamodeld */,
+				354EF10326FB248E00051A95 /* Preview Content */,
+			);
+			path = "Flake-Tech";
+			sourceTree = "<group>";
+		};
+		354EF10326FB248E00051A95 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				354EF10426FB248E00051A95 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		35938A8F27C38CBA0048C906 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				35938A9727C3AFA10048C906 /* Home */,
+				35938A9627C3AF8E0048C906 /* Categories */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		35938A9627C3AF8E0048C906 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				35938A9227C390250048C906 /* CategoriesViewModel.swift */,
+				35938A9427C3A6F00048C906 /* CategoryItemView.swift */,
+				35938A9027C38CCF0048C906 /* CategoriesView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		35938A9727C3AFA10048C906 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				35938A9827C3AFAD0048C906 /* HomeView.swift */,
+				35938AA027C3D3010048C906 /* EditorialView.swift */,
+				35938A9C27C3BEC10048C906 /* TopOffersView.swift */,
+				35938A9E27C3BEF50048C906 /* TopOffersViewModel.swift */,
+				35938A9A27C3AFC00048C906 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		354EF0F926FB248C00051A95 /* Flake-Tech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354EF10E26FB248E00051A95 /* Build configuration list for PBXNativeTarget "Flake-Tech" */;
+			buildPhases = (
+				354EF0F626FB248C00051A95 /* Sources */,
+				354EF0F726FB248C00051A95 /* Frameworks */,
+				354EF0F826FB248C00051A95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flake-Tech";
+			productName = "Flake-Tech";
+			productReference = 354EF0FA26FB248C00051A95 /* Flake-Tech.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		354EF0F226FB248C00051A95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					354EF0F926FB248C00051A95 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 354EF0F526FB248C00051A95 /* Build configuration list for PBXProject "Flake-Tech" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 354EF0F126FB248C00051A95;
+			productRefGroup = 354EF0FB26FB248C00051A95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				354EF0F926FB248C00051A95 /* Flake-Tech */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		354EF0F826FB248C00051A95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354EF11326FB3F3B00051A95 /* Launch Screen.storyboard in Resources */,
+				354EF10526FB248E00051A95 /* Preview Assets.xcassets in Resources */,
+				354EF10226FB248E00051A95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		354EF0F626FB248C00051A95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354EF10726FB248E00051A95 /* Persistence.swift in Sources */,
+				35938A9B27C3AFC00048C906 /* HomeViewModel.swift in Sources */,
+				35938A9127C38CCF0048C906 /* CategoriesView.swift in Sources */,
+				35B08CCF27C2958500BA0AF8 /* LandingContainerView.swift in Sources */,
+				35938A9927C3AFAD0048C906 /* HomeView.swift in Sources */,
+				35938A9F27C3BEF50048C906 /* TopOffersViewModel.swift in Sources */,
+				35938AA127C3D3010048C906 /* EditorialView.swift in Sources */,
+				35938A9527C3A6F00048C906 /* CategoryItemView.swift in Sources */,
+				354EF10A26FB248E00051A95 /* Flake_Tech.xcdatamodeld in Sources */,
+				354EF10026FB248C00051A95 /* ContentView.swift in Sources */,
+				35B08CD127C2959C00BA0AF8 /* LandingViewModel.swift in Sources */,
+				35938A9327C390250048C906 /* CategoriesViewModel.swift in Sources */,
+				35938A9D27C3BEC10048C906 /* TopOffersView.swift in Sources */,
+				354EF0FE26FB248C00051A95 /* Flake_TechApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		354EF10C26FB248E00051A95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		354EF10D26FB248E00051A95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		354EF10F26FB248E00051A95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Flake-Tech/Preview Content\"";
+				DEVELOPMENT_TEAM = 8S49K8U3C3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Flake-Tech/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zaki.Flake-Tech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		354EF11026FB248E00051A95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Flake-Tech/Preview Content\"";
+				DEVELOPMENT_TEAM = 8S49K8U3C3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Flake-Tech/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zaki.Flake-Tech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		354EF0F526FB248C00051A95 /* Build configuration list for PBXProject "Flake-Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354EF10C26FB248E00051A95 /* Debug */,
+				354EF10D26FB248E00051A95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354EF10E26FB248E00051A95 /* Build configuration list for PBXNativeTarget "Flake-Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354EF10F26FB248E00051A95 /* Debug */,
+				354EF11026FB248E00051A95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		354EF10826FB248E00051A95 /* Flake_Tech.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				354EF10926FB248E00051A95 /* Flake_Tech.xcdatamodel */,
+			);
+			currentVersion = 354EF10926FB248E00051A95 /* Flake_Tech.xcdatamodel */;
+			path = Flake_Tech.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 354EF0F226FB248C00051A95 /* Project object */;
+}
