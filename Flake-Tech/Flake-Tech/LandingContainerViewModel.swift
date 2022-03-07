@@ -7,22 +7,27 @@
 
 import Foundation
 import SwiftUI
-class LandingViewModel: LandingProtocol {
+class LandingViewModel<T: Routing>: LandingProtocol {
+    var activeNavigation: T?
     @Published var model: String? = "We are one"
+
+    init(router: T) {
+        self.activeNavigation = router
+    }
     var someView: some View {
         LandingContainerView(landingViewModel: self)
     }
 }
 
 
-protocol LandingProtocol: ObservableObject {
+protocol LandingProtocol: ViewModelProtocol {
     var model: String? { get }
     associatedtype T
     var someView: T { get }
 }
 
-extension LandingProtocol {
-    var someView: some View {
-        Text("asdjs")
-    }
-}
+//extension LandingProtocol {
+//    var someView: some View {
+//        Text("asdjs")
+//    }
+//}

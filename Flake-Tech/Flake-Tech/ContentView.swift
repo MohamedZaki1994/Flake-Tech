@@ -15,11 +15,14 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-    let landingViewModel = LandingViewModel()
+    let landingViewModel = LandingViewModel(router: AppRouter())
+    let vm = ViewModelA(activeNavigation: AppRouter())
     var body: some View {
-        landingViewModel.someView
-
-//        LandingView(landingViewModel: landingViewModel)
+//        landingViewModel.someView
+//        ViewA(router: AppRouter(), viewModel: ViewModelA(activeNavigation: AppRouter()))
+//        ViewA(router: AppRouter(), viewModel: vm)
+//        ViewA(viewModel: vm)
+        LandingContainerView(landingViewModel: landingViewModel)
     }
 
     private func addItem() {
@@ -64,5 +67,127 @@ private let itemFormatter: DateFormatter = {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}
+//////////
+protocol Routing {
+    associatedtype Route
+    associatedtype View: SwiftUI.View
+    @ViewBuilder func view(for route: Route) -> Self.View
+}
+
+enum AppRoutes {
+    case LandingPage
+    case login
+    case homeDetails
+}
+
+protocol ViewModelProtocol: ObservableObject {
+    associatedtype Route
+    var activeNavigation: Route? { get set }
+}
+
+struct MainAppRouter: Routing {
+    func view(for route: AppRoutes) -> some View {
+        switch route {
+        case .LandingPage:
+            Text("landing")
+        case .login:
+            Text("login")
+        case .homeDetails:
+            Text("home details")
+        }
+    }
+}
+
+
+///
+
+
+enum AppRoute {
+    case viewA
+    case viewB
+}
+
+
+struct AppRouter: Routing {
+
+    func view(for route: AppRoute) -> some View {
+        switch route {
+        case .viewA:
+            Text("view A")
+        case .viewB:
+//            ViewB(router: self)
+            ViewB(viewModel: ViewModelB(activeNavigation: self))
+        }
+    }
+}
+
+struct ViewA<ViewModel: ViewModelAProtocol>: View {
+//    let router: Router
+    let viewModel: ViewModel
+    @State var shouldNavigate = false
+    var body: some View {
+        NavigationView {
+            VStack{
+                HStack {
+                    Text("coldy kill them")
+                    Text("with hate and rage")
+                }
+                .onTapGesture {
+                    shouldNavigate = true
+                }
+                NavigationLink(isActive: $shouldNavigate) {
+//                    router.view(for: .viewB)
+//                    viewModel.activeNavigation.view(for: .viewB)
+                    viewModel.navigate()
+                } label: {
+                    EmptyView()
+                }
+            }
+        }
+
+    }
+}
+
+protocol ViewModelBProtocol: ViewModelProtocol {
+    var data: [String]? { get }
+}
+
+class ViewModelB<Route: Routing>: ViewModelBProtocol {
+    var activeNavigation: Route?
+    var data: [String]? = ["1"]
+
+    init(activeNavigation: Route) {
+        self.activeNavigation = activeNavigation
+    }
+
+}
+
+struct ViewB<ViewModel: ViewModelBProtocol>: View {
+    let viewModel: ViewModel
+    var body: some View {
+        Text("There you are\(viewModel.data?.first ?? "")")
+    }
+}
+
+protocol ViewModelAProtocol: ViewModelProtocol {
+//    associatedtype Route
+//    var activeNavigation: Route? { get set }
+    var data: [String]? { get }
+    associatedtype View: SwiftUI.View
+    @ViewBuilder func navigate() -> Self.View
+}
+
+class ViewModelA<Router: Routing>: ViewModelAProtocol where Router.Route == AppRoute {
+    var activeNavigation: Router?
+    var data: [String]? = ["1","2","3","4","5","6",]
+
+    init(activeNavigation: Router) {
+        self.activeNavigation = activeNavigation
+    }
+
+    func navigate() -> some View {
+        activeNavigation?.view(for: .viewB)
     }
 }

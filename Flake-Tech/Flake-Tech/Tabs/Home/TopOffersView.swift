@@ -19,7 +19,7 @@ struct TopOffersView: View {
             }.tabViewStyle(PageTabViewStyle())
                 .frame(height: 200)
                 .background(Color.gray)
-                .cornerRadius(20)
+                .cornerRadius(10)
                 .shadow(color: .gray, radius: 5, x: 4, y: 2)
             Spacer()
         }

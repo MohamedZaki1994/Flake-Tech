@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		354EF10726FB248E00051A95 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EF10626FB248E00051A95 /* Persistence.swift */; };
 		354EF10A26FB248E00051A95 /* Flake_Tech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 354EF10826FB248E00051A95 /* Flake_Tech.xcdatamodeld */; };
 		354EF11326FB3F3B00051A95 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354EF11226FB3F3B00051A95 /* Launch Screen.storyboard */; };
+		3563ECC827CBC4CF0066FC7B /* CategoriesDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563ECC727CBC4CF0066FC7B /* CategoriesDetailsView.swift */; };
+		3563ECCA27CBC4F50066FC7B /* CategoriesDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563ECC927CBC4F50066FC7B /* CategoriesDetailsViewModel.swift */; };
 		35938A9127C38CCF0048C906 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9027C38CCF0048C906 /* CategoriesView.swift */; };
 		35938A9327C390250048C906 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9227C390250048C906 /* CategoriesViewModel.swift */; };
 		35938A9527C3A6F00048C906 /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9427C3A6F00048C906 /* CategoryItemView.swift */; };
@@ -23,10 +25,12 @@
 		35938A9F27C3BEF50048C906 /* TopOffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938A9E27C3BEF50048C906 /* TopOffersViewModel.swift */; };
 		35938AA127C3D3010048C906 /* EditorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35938AA027C3D3010048C906 /* EditorialView.swift */; };
 		35B08CCF27C2958500BA0AF8 /* LandingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */; };
-		35B08CD127C2959C00BA0AF8 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */; };
+		35B08CD127C2959C00BA0AF8 /* LandingContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B08CD027C2959C00BA0AF8 /* LandingContainerViewModel.swift */; };
+		E7AA66072A73A91188AAA7AD /* Pods_Flake_Tech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A4D30222D0BAF56E03B764 /* Pods_Flake_Tech.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02A4D30222D0BAF56E03B764 /* Pods_Flake_Tech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flake_Tech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		354EF0FA26FB248C00051A95 /* Flake-Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flake-Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		354EF0FD26FB248C00051A95 /* Flake_TechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flake_TechApp.swift; sourceTree = "<group>"; };
 		354EF0FF26FB248C00051A95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		354EF10926FB248E00051A95 /* Flake_Tech.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flake_Tech.xcdatamodel; sourceTree = "<group>"; };
 		354EF10B26FB248E00051A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354EF11226FB3F3B00051A95 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3563ECC727CBC4CF0066FC7B /* CategoriesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDetailsView.swift; sourceTree = "<group>"; };
+		3563ECC927CBC4F50066FC7B /* CategoriesDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDetailsViewModel.swift; sourceTree = "<group>"; };
 		35938A9027C38CCF0048C906 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		35938A9227C390250048C906 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		35938A9427C3A6F00048C906 /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
@@ -45,7 +51,9 @@
 		35938A9E27C3BEF50048C906 /* TopOffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopOffersViewModel.swift; sourceTree = "<group>"; };
 		35938AA027C3D3010048C906 /* EditorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorialView.swift; sourceTree = "<group>"; };
 		35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContainerView.swift; sourceTree = "<group>"; };
-		35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		35B08CD027C2959C00BA0AF8 /* LandingContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContainerViewModel.swift; sourceTree = "<group>"; };
+		6A05442539DED1AE682C118F /* Pods-Flake-Tech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flake-Tech.release.xcconfig"; path = "Target Support Files/Pods-Flake-Tech/Pods-Flake-Tech.release.xcconfig"; sourceTree = "<group>"; };
+		7C24823AC4C53E13412C21FF /* Pods-Flake-Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flake-Tech.debug.xcconfig"; path = "Target Support Files/Pods-Flake-Tech/Pods-Flake-Tech.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AA66072A73A91188AAA7AD /* Pods_Flake_Tech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117967BCBE537296741CF0C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02A4D30222D0BAF56E03B764 /* Pods_Flake_Tech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		354EF0F126FB248C00051A95 = {
 			isa = PBXGroup;
 			children = (
 				354EF0FC26FB248C00051A95 /* Flake-Tech */,
 				354EF0FB26FB248C00051A95 /* Products */,
+				66240091A2839AABF5A26572 /* Pods */,
+				117967BCBE537296741CF0C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +100,8 @@
 				354EF0FD26FB248C00051A95 /* Flake_TechApp.swift */,
 				354EF0FF26FB248C00051A95 /* ContentView.swift */,
 				35B08CCE27C2958500BA0AF8 /* LandingContainerView.swift */,
-				35B08CD027C2959C00BA0AF8 /* LandingViewModel.swift */,
+				35B08CD027C2959C00BA0AF8 /* LandingContainerViewModel.swift */,
+				35938AA227C3D9830048C906 /* Components */,
 				35938A8F27C38CBA0048C906 /* Tabs */,
 				354EF10126FB248E00051A95 /* Assets.xcassets */,
 				354EF10626FB248E00051A95 /* Persistence.swift */,
@@ -116,6 +136,8 @@
 				35938A9227C390250048C906 /* CategoriesViewModel.swift */,
 				35938A9427C3A6F00048C906 /* CategoryItemView.swift */,
 				35938A9027C38CCF0048C906 /* CategoriesView.swift */,
+				3563ECC927CBC4F50066FC7B /* CategoriesDetailsViewModel.swift */,
+				3563ECC727CBC4CF0066FC7B /* CategoriesDetailsView.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -132,6 +154,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		35938AA227C3D9830048C906 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		66240091A2839AABF5A26572 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C24823AC4C53E13412C21FF /* Pods-Flake-Tech.debug.xcconfig */,
+				6A05442539DED1AE682C118F /* Pods-Flake-Tech.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 354EF10E26FB248E00051A95 /* Build configuration list for PBXNativeTarget "Flake-Tech" */;
 			buildPhases = (
+				5EADD3818807B6D9FA2B3DC4 /* [CP] Check Pods Manifest.lock */,
 				354EF0F626FB248C00051A95 /* Sources */,
 				354EF0F726FB248C00051A95 /* Frameworks */,
 				354EF0F826FB248C00051A95 /* Resources */,
+				DF3D70DAE53D04AD63A893A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +237,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EADD3818807B6D9FA2B3DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flake-Tech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3D70DAE53D04AD63A893A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flake-Tech/Pods-Flake-Tech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flake-Tech/Pods-Flake-Tech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flake-Tech/Pods-Flake-Tech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		354EF0F626FB248C00051A95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,12 +290,14 @@
 				35B08CCF27C2958500BA0AF8 /* LandingContainerView.swift in Sources */,
 				35938A9927C3AFAD0048C906 /* HomeView.swift in Sources */,
 				35938A9F27C3BEF50048C906 /* TopOffersViewModel.swift in Sources */,
+				3563ECCA27CBC4F50066FC7B /* CategoriesDetailsViewModel.swift in Sources */,
 				35938AA127C3D3010048C906 /* EditorialView.swift in Sources */,
 				35938A9527C3A6F00048C906 /* CategoryItemView.swift in Sources */,
 				354EF10A26FB248E00051A95 /* Flake_Tech.xcdatamodeld in Sources */,
 				354EF10026FB248C00051A95 /* ContentView.swift in Sources */,
-				35B08CD127C2959C00BA0AF8 /* LandingViewModel.swift in Sources */,
+				35B08CD127C2959C00BA0AF8 /* LandingContainerViewModel.swift in Sources */,
 				35938A9327C390250048C906 /* CategoriesViewModel.swift in Sources */,
+				3563ECC827CBC4CF0066FC7B /* CategoriesDetailsView.swift in Sources */,
 				35938A9D27C3BEC10048C906 /* TopOffersView.swift in Sources */,
 				354EF0FE26FB248C00051A95 /* Flake_TechApp.swift in Sources */,
 			);
@@ -340,6 +424,7 @@
 		};
 		354EF10F26FB248E00051A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C24823AC4C53E13412C21FF /* Pods-Flake-Tech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -348,7 +433,7 @@
 				DEVELOPMENT_TEAM = 8S49K8U3C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Flake-Tech/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +447,7 @@
 		};
 		354EF11026FB248E00051A95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A05442539DED1AE682C118F /* Pods-Flake-Tech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,7 +456,7 @@
 				DEVELOPMENT_TEAM = 8S49K8U3C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Flake-Tech/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

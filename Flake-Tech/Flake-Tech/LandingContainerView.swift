@@ -16,8 +16,10 @@ struct LandingContainerView<ViewModel: LandingProtocol>: View {
         self.viewModel = landingViewModel
     }
     @State var selectedTab = 1
+    @State var searchText: String = ""
+        @State private var options: [String] = ["one","two","three"]
     var body: some View {
-        NavigationView {
+//        NavigationView {
             TabView(selection: $selectedTab) {
                 homeViewModel.someView.tabItem {
                     Image(systemName: "house.fill")
@@ -35,8 +37,12 @@ struct LandingContainerView<ViewModel: LandingProtocol>: View {
             .onChange(of: selectedTab) { newSelectedTab in
                 // fire fetching
             }
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarHidden(true)
+//        }
+//            .navigationBarTitle("", displayMode: .inline)
+//            .navigationBarHidden(true)
+//                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always)){
+//                    Text("tw").searchCompletion("two")
+//                }
         }
-    }
+//    }
 }

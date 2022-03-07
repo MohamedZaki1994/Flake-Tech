@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Flake-Tech' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+#  pod 'Components', :git => 'https://github.com/MohamedZaki1994/Components.git'
+pod 'Components', :path => '../../Components'
+  # Pods for Flake-Tech
+
+end
