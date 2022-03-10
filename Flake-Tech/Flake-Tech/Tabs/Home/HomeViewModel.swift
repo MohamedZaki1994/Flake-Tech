@@ -7,15 +7,17 @@
 
 import Foundation
 import SwiftUI
-class HomeViewModel: HomeViewModelProtocol {
+class HomeViewModel<Route: Routing>: HomeViewModelProtocol {
     @Published var viewModel: String? = "welcome to news"
-    var someView: some View {
-        HomeView(viewModel: self)
+    var activeNavigation: Route?
+    init(router: Route) {
+        activeNavigation = router
+    }
+    func navigate() -> some View {
+        Text("yes done")
     }
 }
 
-protocol HomeViewModelProtocol: ObservableObject {
+protocol HomeViewModelProtocol: ViewModelProtocol {
     var viewModel: String? { get }
-    associatedtype View
-    var someView: View { get }
 }

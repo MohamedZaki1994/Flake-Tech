@@ -8,8 +8,13 @@
 import Foundation
 import SwiftUI
 
-class CategoriesViewModel: CategoriesProtocol {
+class CategoriesViewModel<Route: Routing>: CategoriesProtocol {
+    var activeNavigation: Route?
    @Published var model: [CategoryModel]?
+
+    init(router: Route?) {
+        self.activeNavigation = router
+    }
     func fetchCategories() {
         model = [CategoryModel(name: "Decks & Tables", imageName: "desk"),
                  CategoryModel(name: "Seating", imageName: "seat"),
@@ -22,7 +27,7 @@ class CategoriesViewModel: CategoriesProtocol {
     }
 }
 
-protocol CategoriesProtocol: ObservableObject {
+protocol CategoriesProtocol: ViewModelProtocol {
     var model: [CategoryModel]? { get }
     func fetchCategories()
     associatedtype View

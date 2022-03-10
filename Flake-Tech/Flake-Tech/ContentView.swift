@@ -18,9 +18,6 @@ struct ContentView: View {
     let landingViewModel = LandingViewModel(router: AppRouter())
     let vm = ViewModelA(activeNavigation: AppRouter())
     var body: some View {
-//        landingViewModel.someView
-//        ViewA(router: AppRouter(), viewModel: ViewModelA(activeNavigation: AppRouter()))
-//        ViewA(router: AppRouter(), viewModel: vm)
 //        ViewA(viewModel: vm)
         LandingContainerView(landingViewModel: landingViewModel)
     }
@@ -74,20 +71,33 @@ protocol Routing {
     associatedtype Route
     associatedtype View: SwiftUI.View
     @ViewBuilder func view(for route: Route) -> Self.View
+//    associatedtype ViewModel
+//    func didFinish(for: ViewModel)
 }
 
 enum AppRoutes {
     case LandingPage
     case login
     case homeDetails
+    case topOffers
 }
 
 protocol ViewModelProtocol: ObservableObject {
     associatedtype Route
     var activeNavigation: Route? { get set }
+    associatedtype view: SwiftUI.View
+    @ViewBuilder func navigate() -> Self.view
+}
+extension ViewModelProtocol {
+    func navigate() -> some View {
+        Text("please implement navigate func")
+    }
 }
 
 struct MainAppRouter: Routing {
+//    func didFinish(for: ViewModel) {
+//
+//    }
     func view(for route: AppRoutes) -> some View {
         switch route {
         case .LandingPage:
@@ -96,6 +106,8 @@ struct MainAppRouter: Routing {
             Text("login")
         case .homeDetails:
             Text("home details")
+        case .topOffers:
+            Text("top offers")
         }
     }
 }

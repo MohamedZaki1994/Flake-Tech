@@ -10,23 +10,34 @@ import Components
 
 struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @State var searchText: String = ""
+    @State var shouldNavigate = false
     @ObservedObject var viewModel: ViewModel
+    var topOffersViewModel = TopOffersViewModel(activeNavigation: MainAppRouter())
     var oneColumns = [GridItem()]
     var body: some View {
         NavigationView {
         ScrollView {
             LazyVGrid(columns: oneColumns) {
                 Text(viewModel.viewModel ?? "")
-                TopOffersView()
+                TopOffersView(viewModel: topOffersViewModel)
                 EditorialView()
                 CustomButton(title: "Hooooo") {
-                    print("click")
+                    shouldNavigate = true
                 }
                 NavigationLink("Title") {
-                    Text("d")
+                    EmptyView()
                 }
+                NavigationLink(isActive: $shouldNavigate) {
+                    viewModel.navigate()
+                } label: {
+                    EmptyView()
+                }
+
             }.padding()
         }
+        .navigationBarTitle("", displayMode: .inline)
+//        .navigationBarHidden(true)
+
     }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always)){
             Text("tw").searchCompletion("two")
