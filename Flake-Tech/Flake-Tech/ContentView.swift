@@ -76,6 +76,11 @@ protocol Routing {
 }
 
 enum AppRoutes {
+    enum Route {
+        case topOffers
+        case recommended
+    }
+    case Home(Route)
     case LandingPage
     case login
     case homeDetails
@@ -95,9 +100,7 @@ extension ViewModelProtocol {
 }
 
 struct MainAppRouter: Routing {
-//    func didFinish(for: ViewModel) {
-//
-//    }
+
     func view(for route: AppRoutes) -> some View {
         switch route {
         case .LandingPage:
@@ -107,7 +110,14 @@ struct MainAppRouter: Routing {
         case .homeDetails:
             Text("home details")
         case .topOffers:
-            Text("top offers")
+            TopOffersView(viewModel: TopOffersViewModel(route: self))
+        case .Home(let route):
+            switch route {
+            case .topOffers:
+                Text("A")
+            case .recommended:
+                Text("B")
+            }
         }
     }
 }

@@ -19,7 +19,6 @@ struct LandingContainerView<ViewModel: LandingProtocol>: View {
     @State var searchText: String = ""
     @State private var options: [String] = ["one","two","three"]
     var body: some View {
-//        NavigationView {
             TabView(selection: $selectedTab) {
                 HomeView(viewModel: homeViewModel)
                     .tabItem {
@@ -39,12 +38,8 @@ struct LandingContainerView<ViewModel: LandingProtocol>: View {
             .onChange(of: selectedTab) { newSelectedTab in
                 // fire fetching
             }
-//            .navigationBarTitle("", displayMode: .inline)
-//            .navigationBarHidden(true)
-//        }
 //                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always)){
 //                    Text("tw").searchCompletion("two")
 //                }
         }
-//    }
 }

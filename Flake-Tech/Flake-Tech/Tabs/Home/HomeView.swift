@@ -6,24 +6,22 @@
 //
 
 import SwiftUI
-import Components
 
 struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @State var searchText: String = ""
     @State var shouldNavigate = false
     @ObservedObject var viewModel: ViewModel
-    var topOffersViewModel = TopOffersViewModel(activeNavigation: MainAppRouter())
+    var topOffersViewModel = TopOffersComponentViewModel(activeNavigation: MainAppRouter())
+    var recommendedViewMdel = RecommendedViewModel(route: MainAppRouter())
     var oneColumns = [GridItem()]
     var body: some View {
         NavigationView {
         ScrollView {
             LazyVGrid(columns: oneColumns) {
                 Text(viewModel.viewModel ?? "")
-                TopOffersView(viewModel: topOffersViewModel)
+                TopOffersComponentView(viewModel: topOffersViewModel)
                 EditorialView()
-                CustomButton(title: "Hooooo") {
-                    shouldNavigate = true
-                }
+                RecommendedView(viewModel: recommendedViewMdel)
                 NavigationLink("Title") {
                     EmptyView()
                 }
