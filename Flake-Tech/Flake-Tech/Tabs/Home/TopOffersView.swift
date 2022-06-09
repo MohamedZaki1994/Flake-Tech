@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
     var viewModel: ViewModel
-    @State var productSize = ""
+    @State var productSize = "100 x 60"
     @State var size: Double = 0
     var body: some View {
         List {
@@ -32,23 +32,7 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
             Text("Hello, World!\(viewModel.data ?? "")")
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets())
-//            Slider(value: $size, in: 0...5)
-
-//            VStack {
-//                Text("Choose a size")
-//                Picker("Choose a size", selection: $productSize) {
-//                    Text("100 x 60")
-//                    Text("120 x 60")
-//                    Text("140 x 80")
-//                    Text("160 x 80")
-//                } .frame(height: 50)
-//            }
-//            .listRowSeparator(.hidden)
-//            .listRowInsets(EdgeInsets())
-//            SizePicker()
-            NavigationLink((!productSize.isEmpty) ? "\(productSize)" : "Choose a size") {
                 SizePicker(productSize: $productSize)
-            }
             .navigationBarTitleDisplayMode(.large)
 
             Spacer()
@@ -68,10 +52,10 @@ struct SizePicker: View {
                 ForEach(array, id: \.self) {
                     Text($0)
                 }
-            }.pickerStyle(WheelPickerStyle())
+            }.pickerStyle(SegmentedPickerStyle())
             Text("You selected: \(productSize)")
         }
-        .navigationTitle("\( productSize ?? "5" )")
+        .navigationTitle(productSize)
         .navigationBarTitleDisplayMode(.large)
     }
 }
