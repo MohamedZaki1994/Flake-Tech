@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
     var viewModel: ViewModel
-    @State var productSize: Int?
+    @State var productSize = ""
     @State var size: Double = 0
     var body: some View {
         List {
@@ -46,14 +46,8 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
 //            .listRowSeparator(.hidden)
 //            .listRowInsets(EdgeInsets())
 //            SizePicker()
-            NavigationLink("Choose a size") {
-//                Picker("Choose a size", selection: $productSize) {
-//                    Text("100 x 60")
-//                    Text("120 x 60")
-//                    Text("140 x 80")
-//                    Text("160 x 80")
-//                } .frame(height: 50)
-                SizePicker()
+            NavigationLink((!productSize.isEmpty) ? "\(productSize)" : "Choose a size") {
+                SizePicker(productSize: $productSize)
             }
             .navigationBarTitleDisplayMode(.large)
 
@@ -65,19 +59,19 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
 }
 
 struct SizePicker: View {
-    @State var productSize: Int?
+    @Binding var productSize: String
+    var array = ["100 x 60","120 x 60","140 x 80","160 x 80"]
 
     var body: some View {
         VStack {
-//            Text("Choose a size")
-            Picker("Choose a size", selection: $productSize) {
-                Text("100 x 60")
-                Text("120 x 60")
-                Text("140 x 80")
-                Text("160 x 80")
+            Picker("Please choose a color", selection: $productSize) {
+                ForEach(array, id: \.self) {
+                    Text($0)
+                }
             }.pickerStyle(WheelPickerStyle())
+            Text("You selected: \(productSize)")
         }
-        .navigationTitle("Choose your size")
+        .navigationTitle("\( productSize ?? "5" )")
         .navigationBarTitleDisplayMode(.large)
     }
 }
