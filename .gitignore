@@ -55,3 +55,6 @@ sonar-reports
 #React
 /node_modules/
 package-lock.json
+
+
+*.lock
