@@ -13,20 +13,45 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
     @State var productColor = "White"
     @State var size: Double = 0
     @State var quantity = 1
+    @State var isFavorite = false
+    @State var showFavoriteAlert = false
     var body: some View {
         List {
             ZStack(alignment: .topLeading) {
                 Image("accessories")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                ZStack {
-                    Star(corners: 8, smoothness: 0.7)
-                        .fill(.red)
-                        .frame(width: 100, height: 100)
-                        .opacity(0.6)
-                    Text("Sale")
-                        .font(.system(size: 24))
+                HStack(alignment: .top) {
+                    ZStack {
+                        Star(corners: 8, smoothness: 0.7)
+                            .fill(.red)
+                            .frame(width: 100, height: 100)
+                            .opacity(0.6)
+                        Text("Sale")
+                            .font(.system(size: 24))
+                            .padding()
+                    }
+                    Spacer()
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(isFavorite ? .red : .white)
                         .padding()
+                        .animation(.default, value: isFavorite)
+                        .onTapGesture {
+                            isFavorite.toggle()
+                            showFavoriteAlert.toggle()
+                        }
+                        .alert(isPresented: $showFavoriteAlert) {
+                            Alert(title: Text("Item has been added"), dismissButton: .default(Text("Got it!")))
+                        }.onChange(of: showFavoriteAlert) { newValue in
+                            if newValue {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    self.showFavoriteAlert = false
+                                }
+                            }
+                        }
                 }
             }
                 .listRowInsets(EdgeInsets())
@@ -52,7 +77,6 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
                 Stepper("", value: $quantity, in: 1...50).frame(width: 100)
             }.listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets())
-            .navigationBarTitleDisplayMode(.large)
 
             Spacer()
                 .listRowSeparator(.hidden)
@@ -75,7 +99,6 @@ struct SizePicker: View {
             Text("You selected: \(productSize)")
         }
         .navigationTitle(productSize)
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 
@@ -122,7 +145,6 @@ struct ColorPicker: View {
             }
         }
         .navigationTitle(productColor)
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 
