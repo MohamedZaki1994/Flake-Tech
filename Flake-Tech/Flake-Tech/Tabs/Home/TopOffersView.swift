@@ -10,7 +10,9 @@ import SwiftUI
 struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
     var viewModel: ViewModel
     @State var productSize = "100 x 60"
+    @State var productColor = "White"
     @State var size: Double = 0
+    @State var quantity = 1
     var body: some View {
         List {
             ZStack(alignment: .topLeading) {
@@ -32,7 +34,24 @@ struct TopOffersView<ViewModel: TopOffersViewModelProtocol>: View {
             Text("Hello, World!\(viewModel.data ?? "")")
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets())
-                SizePicker(productSize: $productSize)
+            SizePicker(productSize: $productSize)
+            ColorPicker(productColor: $productColor)
+                .listRowSeparator(.hidden)
+            HStack {
+                Button(action: {
+                    print("add to card")
+                }, label: {
+                    Text("Add to card")
+                })
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .cornerRadius(5)
+                    .buttonStyle(BorderedButtonStyle())
+                    .padding(.leading, 10)
+                Text("\(quantity)").padding()
+                Stepper("", value: $quantity, in: 1...50).frame(width: 100)
+            }.listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
             .navigationBarTitleDisplayMode(.large)
 
             Spacer()
@@ -58,4 +77,56 @@ struct SizePicker: View {
         .navigationTitle(productSize)
         .navigationBarTitleDisplayMode(.large)
     }
+}
+
+enum ProductColor: String, CaseIterable {
+    case white = "White"
+    case black = "Black"
+    case walnut = "Walnut"
+    case radiance_Oak = "Radiance Oak"
+}
+
+struct ColorPicker: View {
+    @State var currentColor = Color.white
+    @Binding var productColor: String
+    var allColors = ProductColor.allCases.map{ $0.rawValue }
+
+    var body: some View {
+        VStack {
+            Picker("Please choose a color", selection: $productColor) {
+                ForEach(allColors, id: \.self) {
+                    Text($0)
+                }
+            }.pickerStyle(SegmentedPickerStyle())
+                .onChange(of: productColor) { newValue in
+                    switch newValue {
+                    case "White":
+                        currentColor = .white
+                    case "Black":
+                        currentColor = .black
+                    case "Walnut":
+                        currentColor = .walnut
+                    case "Radiance Oak":
+                        currentColor = .radianceOak
+                    default:
+                        currentColor = .red
+                    }
+                }
+            HStack {
+                Text("You selected: \(productColor)")
+                Spacer()
+                RoundedRectangle(cornerRadius: 5)
+                    .strokeBorder(.black, lineWidth: 1)
+                    .background(RoundedRectangle(cornerRadius: 5).fill(currentColor))
+                    .frame(width: 30, height: 30)
+            }
+        }
+        .navigationTitle(productColor)
+        .navigationBarTitleDisplayMode(.large)
+    }
+}
+
+extension Color {
+    static var radianceOak: Color { Color(red: 187/255, green: 144/255, blue: 88/255) }
+    static var walnut: Color { Color(red: 119/255, green: 63/255, blue: 26/255) }
 }
